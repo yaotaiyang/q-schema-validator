@@ -23,7 +23,7 @@ npm install q-schema-validator --save
 ### use
 
 ``` javascript
-import JSONSchemaValidator from '../src'
+import JSONSchemaValidator from 'q-schema-validator'
 
 let schema = {
   "type": "object",
