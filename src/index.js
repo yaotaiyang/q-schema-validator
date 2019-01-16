@@ -22,7 +22,7 @@ const messages = {
  * @export
  * @class JSONSchemaValidator
  */
-export default class JSONSchemaValidator {
+class JSONSchemaValidator {
   constructor() {
     this.errors = []
   }
@@ -63,5 +63,7 @@ export default class JSONSchemaValidator {
     return this.errors;
   }
 }
+export default JSONSchemaValidator;
+export { JSONSchemaValidator }
 
 

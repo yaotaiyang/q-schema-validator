@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+
+<body>
+  see the console
+  <script src="https://unpkg.com/q-schema-validator/lib/index.js"></script>
+
+  <script>
+    let schema = {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ac": {
+                "type": "number"
+              },
+              "g": {
+                "type": "string"
+              }
+            },
+            "required": [ 'g' ]
+          }
+        },
+        "b": {
+          "type": [ 'number' ]
+        }
+      },
+      "required": [ "b", "f" ]
+    }
+    let data = {
+      "a": [ {
+        "ac": '11'
+      } ],
+      "b": '111'
+    }
+
+    var validator = new JSONSchemaValidator();
+    let res = validator.validate(data, schema);
+    console.log(validator);
+    console.log(JSON.stringify(res, null, 2));
+  </script>
+</body>
+
+</html>

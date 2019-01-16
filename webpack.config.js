@@ -14,7 +14,7 @@ module.exports = function (env = {}) {
 
   return {
     mode: 'development',
-    entry: './example/index',
+    entry: './example/test',
     devtool: 'inline-source-map',
 
     module: {
@@ -41,9 +41,9 @@ module.exports = function (env = {}) {
 
     plugins: [
       new HTMLPlugin({
-        filename: "index.html",
+        filename: 'main',
         template: './example/test.html',
-        inject: true
+        inject: false
       }),
       new webpack.NamedModulesPlugin(),
       new webpack.HotModuleReplacementPlugin()

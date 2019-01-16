@@ -1,4 +1,20 @@
 import JSONSchemaValidator from '../lib'
+import { test } from './test'
+
+let somePromise = function () {
+  return new Promise(function (resolve, reject) {
+    setTimeout(() => {
+      resolve(1000);
+    }, 100)
+  });
+}
+async function getTest() {
+  let abc = await somePromise();
+  console.log(abc);
+  return abc;
+}
+getTest();
+
 
 let schema = {
   "type": "object",

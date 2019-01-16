@@ -18,7 +18,7 @@ module.exports = function (env = {}) {
     output: {
       path: path.resolve(__dirname, './lib'),
       filename: '[name].js',
-      library: 'draggable',
+      //library: 'JSONSchemaValidator',
       libraryTarget: 'umd'
     },
     module: {
